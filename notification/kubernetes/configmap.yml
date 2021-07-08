@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: hotelcm
+  namespace: teamtwohotel
+data:
+  text1: Customer1_Company
+  text2: Welcomes You
+  company: Customer1 Company Technology Pct. Ltd.
