@@ -22,11 +22,13 @@ public class PolicyHandler{
             Optional<Taxi> itemOptional = itemRepository.findById(paid.getItemId()) ;
             Taxi item = itemOptional.get();
             item.setStockCnt( item.getStockCnt() - paid.getQty() );
-            
+
+            System.out.println("현재 택시 보유수량=" + item.getStockCnt());
+
             if(item.getStockCnt() < 0 ) {
                 System.out.println("@@@@@@@ out of stock ");
 
-                // 아이템 재고가 충분치 않을 경우  재고부족 이벤트 생성
+                // 택시 보유가 충분치 않을 경우  택시부족 이벤트 생성
 
                 TaxiOutOfStock itemOutOfStock = new TaxiOutOfStock();
                 itemOutOfStock.setId(paid.getItemId());

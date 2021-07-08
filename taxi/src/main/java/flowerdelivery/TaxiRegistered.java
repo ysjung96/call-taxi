@@ -3,8 +3,8 @@ package flowerdelivery;
 public class TaxiRegistered extends AbstractEvent {
 
     private Long id;
-    private String itemName;
-    private String storeName;
+    private String taxiName;
+    private String companyName;
     private Long itemPrice;
 
     public Long getId() {
@@ -15,18 +15,18 @@ public class TaxiRegistered extends AbstractEvent {
         this.id = id;
     }
     public String getItemName() {
-        return itemName;
+        return taxiName;
     }
 
     public void setItemName(String itemName) {
-        this.itemName = itemName;
+        this.taxiName = itemName;
     }
     public String getStoreName() {
-        return storeName;
+        return companyName;
     }
 
     public void setStoreName(String storeName) {
-        this.storeName = storeName;
+        this.companyName = storeName;
     }
     public Long getItemPrice() {
         return itemPrice;

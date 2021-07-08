@@ -1,38 +1,34 @@
 package flowerdelivery;
 
 import javax.persistence.*;
+
 import org.springframework.beans.BeanUtils;
 
 @Entity
-@Table(name="Item_table")
+@Table(name = "Taxi_table")
 public class Taxi {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String itemName;
-    private String storeName;
+    private String taxiName;
+    private String companyName;
     private Integer stockCnt;
-    private Long itemPrice;
+    private Long taxiPrice;
 
     @PostPersist
-    public void onPostPersist(){
+    public void onPostPersist() {
         TaxiRegistered itemRegistered = new TaxiRegistered();
         BeanUtils.copyProperties(this, itemRegistered);
         itemRegistered.publishAfterCommit();
-
-
     }
 
     @PostUpdate
-    public void onPostUpdate(){
+    public void onPostUpdate() {
         StockChanged stockChanged = new StockChanged();
         BeanUtils.copyProperties(this, stockChanged);
         stockChanged.publishAfterCommit();
-
-
     }
-
 
     public Long getId() {
         return id;
@@ -41,20 +37,23 @@ public class Taxi {
     public void setId(Long id) {
         this.id = id;
     }
-    public String getItemName() {
-        return itemName;
+
+    public String getTaxiName() {
+        return taxiName;
     }
 
-    public void setItemName(String itemName) {
-        this.itemName = itemName;
-    }
-    public String getStoreName() {
-        return storeName;
+    public void setTaxiName(String taxiName) {
+        this.taxiName = taxiName;
     }
 
-    public void setStoreName(String storeName) {
-        this.storeName = storeName;
+    public String getCompanyName() {
+        return companyName;
     }
+
+    public void setStoreName(String companyName) {
+        this.companyName = companyName;
+    }
+
     public Integer getStockCnt() {
         return stockCnt;
     }
@@ -62,15 +61,12 @@ public class Taxi {
     public void setStockCnt(Integer stockCnt) {
         this.stockCnt = stockCnt;
     }
+
     public Long getItemPrice() {
-        return itemPrice;
+        return taxiPrice;
     }
 
     public void setItemPrice(Long itemPrice) {
-        this.itemPrice = itemPrice;
+        this.taxiPrice = itemPrice;
     }
-
-
-
-
 }
