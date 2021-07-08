@@ -23,7 +23,11 @@ spring:
         - id: notification
           uri: http://localhost:8084
           predicates:
-            - Path= /mypages/**
+            - Path=/mypages/**
+        - id: taxi
+          uri: http://localhost:8085
+          predicates:
+            - Path=/taxis/**
       globalcors:
         corsConfigurations:
           '[/**]':
@@ -59,6 +63,10 @@ spring:
           uri: http://customer:8080
           predicates:
             - Path= /mypages/**
+        - id: taxi
+          uri: http://localhost:8080
+          predicates:
+            - Path=/taxis/**
       globalcors:
         corsConfigurations:
           '[/**]':
