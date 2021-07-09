@@ -16,10 +16,9 @@ Final Project AWS 3차수 - 개인평가 제출자료입니다.
     - [동기식 호출 과 Fallback 처리](#동기식-호출-과-Fallback-처리)       
     - [비동기식 호출 과 Eventual Consistency](#비동기식-호출--시간적-디커플링--장애격리--최종-eventual-일관성-테스트)
     - [API Gateway](#API-게이트웨이-(gateway))                            
-    - [SAGA-CQRS](#마이페이지)   
-    -                      
+    - [SAGA-CQRS](#마이페이지)           
   - [운영](#운영)
-    - 컨테이너 이미지 생성 및 배포(#컨테이너-이미지-생성-및-배포) 
+    - 컨테이너 이미지 생성 및 배포(#컨테이너-이미지-생성-및-배포)
     - [동기식 호출 / Circuit Breaker](#동기식-호출--Circuit-Breaker) 
     - [오토스케일 아웃](#오토스케일-아웃)
     - [무정지 재배포(Readiness Probe)](#무정지-배포(Readiness-Probe))
