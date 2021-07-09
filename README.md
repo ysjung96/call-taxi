@@ -1232,8 +1232,8 @@ Shortest transaction:           0.00
 livenessProbe:
   exec:
     command:
-      - cat 
-      - /tmp/healthy
+    - cat 
+    - /tmp/healthy
   initialDelaySeconds: 120
   timeoutSeconds: 2
   periodSeconds: 5
