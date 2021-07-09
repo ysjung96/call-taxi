@@ -1,9 +1,8 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: healthcenter-config
-  namespace: healthcenter
+  name: calltaxi-config
+  namespace: default
 data:
-  # 단일 key-value
-  max_reservation_per_person: "10"
-  ui_properties_file_name: "user-interface.properties"
+  min_tax_price: "3800"
+  payment_gateway_server: "http://pg.example.com"

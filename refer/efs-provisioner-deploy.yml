@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: efs-provisioner
-  namespace: healthcenter
+  namespace: default
 spec:
   replicas: 1
   strategy:
@@ -21,9 +21,9 @@ spec:
           image: quay.io/external_storage/efs-provisioner:latest
           env:
             - name: FILE_SYSTEM_ID
-              value: fs-a2338ac2
+              value: fs-c022969b
             - name: AWS_REGION
-              value: ap-northeast-2
+              value: eu-central-1
             - name: PROVISIONER_NAME
               value: my-aws.com/aws-efs
           volumeMounts:
@@ -32,5 +32,5 @@ spec:
       volumes:
         - name: pv-volume
           nfs:
-            server: fs-a2338ac2.efs.ap-northeast-2.amazonaws.com
+            server: fs-c022969b.efs.eu-central-1.amazonaws.com
             path: /
