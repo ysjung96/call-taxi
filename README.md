@@ -1229,15 +1229,15 @@ Shortest transaction:           0.00
 
 ```
 #### payment 서비스의 deployment.yml 파일 수정
-	livenessProbe:
-      exec:
-        command:
-        - cat 
-        - /tmp/healthy
-      initialDelaySeconds: 120
-	  timeoutSeconds: 2
-	  periodSeconds: 5
-	  failureThreshold: 5
+livenessProbe:
+  exec:
+    command:
+      - cat 
+      - /tmp/healthy
+  initialDelaySeconds: 120
+  timeoutSeconds: 2
+  periodSeconds: 5
+  failureThreshold: 5
 ```
 
 ###### payment 서비스의 livenessProbe 설정 적용 확인
