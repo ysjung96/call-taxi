@@ -1445,9 +1445,9 @@ spec:
           image: quay.io/external_storage/efs-provisioner:latest
           env:
             - name: FILE_SYSTEM_ID
-              value: fs-562f9c36
+              value: fs-c022969b
             - name: AWS_REGION
-              value: ap-northeast-2
+              value: eu-central-1
             - name: PROVISIONER_NAME
               value: my-aws.com/aws-efs
           volumeMounts:
@@ -1456,7 +1456,7 @@ spec:
       volumes:
         - name: pv-volume
           nfs:
-            server: fs-562f9c36.efs.ap-northeast-2.amazonaws.com
+            server: fs-c022969b.efs.eu-central-1.amazonaws.com
             path: /
 
 root@labs-1176757103:/home/project/call-taxi/refer# kubectl get deployment efs-provisioner
