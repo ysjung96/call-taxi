@@ -1234,8 +1234,10 @@ Shortest transaction:           0.00
         command:
         - cat 
         - /tmp/healthy
-      initialDelaySeconds: 30
+      initialDelaySeconds: 120
+	  timeoutSeconds: 2
       periodSeconds: 5
+	  failureThreshold: 5
 ```
 
 ###### payment 서비스의 livenessProbe 설정 적용 확인
@@ -1274,7 +1276,7 @@ Containers:
       cpu:  500m
     Requests:
       cpu:        200m
-    Liveness:     exec [cat /tmp/healthy] delay=5s timeout=1s period=5s #success=1 #failure=3 ---> 설정 확인
+    Liveness:     exec [cat /tmp/healthy] delay=120s timeout=2s period=5s #success=1 #failure=5 ---> 설정 확인
     Readiness:    http-get http://:8080/actuator/health delay=10s timeout=2s period=5s #success=1 #failure=10
     Environment:  <none>
     Mounts:
