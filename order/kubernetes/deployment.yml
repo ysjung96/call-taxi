@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: order
-  namespace: healthcenter
   labels:
     app: order
 spec:
@@ -17,10 +16,13 @@ spec:
     spec:
       containers:
         - name: order
-          image: 740569282574.dkr.ecr.ap-northeast-2.amazonaws.com/order:v1
+          image: 879772956301.dkr.ecr.eu-central-1.amazonaws.com/order:v2
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
+          resources:
+            requests:
+              cpu: "200m"
           readinessProbe:
             httpGet:
               path: '/actuator/health'
