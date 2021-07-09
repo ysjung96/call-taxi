@@ -1236,7 +1236,7 @@ Shortest transaction:           0.00
         - /tmp/healthy
       initialDelaySeconds: 120
 	  timeoutSeconds: 2
-      periodSeconds: 5
+	  periodSeconds: 5
 	  failureThreshold: 5
 ```
 
