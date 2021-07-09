@@ -1333,8 +1333,8 @@ payment-585fd6b755-c9jp2        1/1     Running             3          4m53s
 ```
 EFS 생성 시 EC2 인스턴스를 EFS에 연결할 때 VPC를 선택해야 하고, 보안 그룹(ClusterSharedNode-SG)을 적용해야 한다.
 ```
-![EFS생성](EFS.png)
-![EFS보안](EFS_SG.png)
+![EFS생성](refer/EFS.png)
+![EFS보안](refer/EFS_SG.png)
 
 2. EFS 계정 생성 및 ROLE 바인딩
 ```
