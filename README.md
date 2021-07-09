@@ -80,7 +80,7 @@ Final Project AWS 3차수 - 개인평가 제출자료입니다.
 ![ver1](refer/TAXI.png)
 
 #### Final - relation 정의 및 attribute 생성
-![ver2](refer/MSA.PNG)
+![ver2](refer/MSA.png)
 
 ### 기능 요구사항을 커버하는지 검증
 1. 고객이 원하는 택시 등급을 선택하고 예약한다. ---> OK
