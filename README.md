@@ -1562,7 +1562,7 @@ data:
 root@labs-1176757103:/home/project/call-taxi/payment/kubernetes# kubectl apply -f deployment.yml
 deployment.apps/payment configured
 
-		env:
+       env:
           - name: MIN_TAX_PRICE
               valueFrom:
                 configMapKeyRef:
