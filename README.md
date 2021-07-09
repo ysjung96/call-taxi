@@ -1459,9 +1459,9 @@ spec:
             server: fs-562f9c36.efs.ap-northeast-2.amazonaws.com
             path: /
 
-root@labs-1176757103:/home/project/call-taxi/refer# kubectl get sc aws-efs
-NAME      PROVISIONER          RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
-aws-efs   my-aws.com/aws-efs   Delete          Immediate           false                  9s
+root@labs-1176757103:/home/project/call-taxi/refer# kubectl get deployment efs-provisioner
+NAME              READY   UP-TO-DATE   AVAILABLE   AGE
+efs-provisioner   1/1     1            1           11s
 ```
 
 4. 설치한 Provisioner를 storageclass에 등록
